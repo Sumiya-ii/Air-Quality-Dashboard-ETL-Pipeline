@@ -1,0 +1,7 @@
+.env
+*.pyc
+logs/
+temp/
+config/
+dags/__pycache__/
+py_env/
