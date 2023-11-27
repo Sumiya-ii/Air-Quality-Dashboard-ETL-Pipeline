@@ -12,7 +12,7 @@ from airflow.providers.amazon.aws.hooks.s3 import S3Hook
 
 
 api_key = os.environ.get('OPENAQ_API_KEY')
-# s3_bucket_name = os.environ.get("S3_BUCKET")
+
 s3_bucket_name = "air-quality-bucket-ulaanbaatar"
 
 
