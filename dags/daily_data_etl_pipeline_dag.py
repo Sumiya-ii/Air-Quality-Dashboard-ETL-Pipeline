@@ -17,7 +17,7 @@ s3_bucket_name = "air-quality-bucket-ulaanbaatar"
 
 default_args = {
     'owner': 'sumiya',
-    'start_date': datetime(2023, 11, 20),
+    'start_date': datetime(2023, 11, 27),
     'retries': 0,
     'retry_delay': timedelta(minutes=10)
 }
@@ -37,7 +37,7 @@ def fetch_openaq_data_and_upload(**kwargs):
         start_date = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%S%z")
 
     # OpenAQ API URL 
-    api_url = f"https://api.openaq.org/v2/averages?temporal=day&parameters_id=2&date_from={start_date}&date_to={end_date}&locations_id=400577&limit=1000"
+    api_url = f"https://api.openaq.org/v2/averages?temporal=day&parameters_id=2&date_from={start_date}&date_to={end_date}&locations_id=72184&limit=1000"
 
     # Pull data from OpenAQ API
     response = requests.get(api_url, headers={"X-API-Key": api_key})
